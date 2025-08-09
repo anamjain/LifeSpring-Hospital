@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/2.css">
+    <title>Book an Appointment</title>
+</head>
+<body>
+    <div class="container">
+        <h1>PATIENT DETAILS</h1>
+        <form id="appointmentForm">
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" placeholder="Enter your full name" required>
+            
+
+            <label for="patientAge">AGE:</label>
+            <input type="number" id="patientAge" required>
+
+            <label for="patientEmail">E-MAIL:</label>
+            <input type="email" id="patientEmail" required>
+
+            <label for="patientEmail">PHONE NUMBER:</label>
+            <input type="phonenumber" id="patientphonenumber" required>
+
+            <div class="maxl">
+                <label class="radio inline sf_ui_displaylight"> 
+                    Gender
+                </label>
+                <label class="radio inline"> 
+                    <input type="radio" name="data[Appointment][gender]" value="male" checked="">
+                    <span class="sf_ui_displaylight "> Male </span> 
+                </label>
+                <label class="radio inline "> 
+                    <input type="radio" name="data[Appointment][gender]" value="female">
+                    <span class="sf_ui_displaylight ">Female </span> 
+                </label>
+            </div>
+
+
+        </form>
+    </div>
+
+
+        <div class="container"> 
+        <h1>BOOK AN  APPOINTMENT</h1>
+        <form id="appointmentForm">
+           <div class="appointment-section"> 
+                <!-- <h4>Doctor Appointment</h4> -->
+                <form id="appointment-form">
+                    <label for="specialist-category">Select Specialist Category:</label>
+                    <select id="specialist-category" name="specialistCategory" required>
+                        <option value="none">-- Select Specialist Category --</option>
+                        <option value="cardiology">Cardiologist</option>
+                        <option value="dermatology">speech therapist</option>
+                        <option value="dentistry">physician</option>
+                        <option value="ophthalmology">pshychatrist</option>
+                        <option value="ophthalmology">pulmonologist</option>
+                        <option value="ophthalmology">neurologist</option>
+                    </select></form></div>
+
+
+            
+
+
+            <label for="doctor">Choose a Doctor:</label>
+            <select id="doctor" name="doctor" required onchange="updateSpecialization()">
+                <option value="dr_smith">Dr. Rajesh Sharma</option>
+                <option value="dr_jones">Dr. Nitu Goyal</option>
+                <option value="dr_jones">Dr. Vivek Jain</option>
+                <option value="dr_smith">Dr. Nitin Pareek</option>
+                <option value="dr_jones">Dr.Sunita Vyas</option>
+                <option value="dr_jones">Dr.Krishnan Gupta </option>
+                
+            </select>
+
+
+            <label for="date1" >Preferred Date 1:</label>
+            <input type="date" id="date1" name="date1" required>
+
+            <label for="date2">Preferred Date 2:</label>
+            <input type="date" id="date2" name="date2" required>
+            <a href="./3.html"><button type="button" id="button"  onclick="submitForm()"> GET APPOINTMENT </button>   <meta charset="UTF-8"></a>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          
+             
+        </form>
+    </div>
+
+    <script src="../js/2.js"></script>
+</body>
+</html>
